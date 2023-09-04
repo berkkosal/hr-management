@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 public interface EmployeeController {
 
+    @PostMapping("/add-user")
     ResponseEntity addEmploye(@RequestBody AddEmployeRequest request);
 
 
