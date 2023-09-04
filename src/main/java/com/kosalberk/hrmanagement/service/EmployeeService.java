@@ -1,4 +1,4 @@
 package com.kosalberk.hrmanagement.service;
 
-public interface UserService {
+public interface EmployeeService {
 }
