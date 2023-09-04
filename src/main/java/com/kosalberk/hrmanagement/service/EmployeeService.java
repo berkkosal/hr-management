@@ -1,9 +1,9 @@
 package com.kosalberk.hrmanagement.service;
 
-import com.kosalberk.hrmanagement.model.request.AddEmployeRequest;
+import com.kosalberk.hrmanagement.model.request.AddEmployeeRequest;
 
 public interface EmployeeService {
 
-    void register(AddEmployeRequest request);
+    void register(AddEmployeeRequest request);
 
 }

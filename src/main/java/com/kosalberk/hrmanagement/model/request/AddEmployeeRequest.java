@@ -1,10 +1,9 @@
 package com.kosalberk.hrmanagement.model.request;
 
-import jakarta.persistence.Column;
 import lombok.Data;
 
 @Data
-public class AddEmployeRequest {
+public class AddEmployeeRequest {
 
     private String name;
     private String surname;
