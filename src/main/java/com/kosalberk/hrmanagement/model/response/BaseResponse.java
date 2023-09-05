@@ -8,7 +8,7 @@ public class BaseResponse <T> {
     private boolean isSuccess;
     private T data;
 
-    public static <T>ResponseEntity<BaseResponse<T>> ok(T data, Integer statusCode){
+    public static <T> ResponseEntity<BaseResponse<T>> ok(T data, Integer statusCode){
         BaseResponse<T> response = new BaseResponse<>();
         response.setSuccess(true);
         response.setData(data);
