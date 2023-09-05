@@ -38,7 +38,7 @@ export default function AddEmployeeForm() {
                 <div className="form-row">
                     <div className="form-group col-sm-6">
                         <label htmlFor="name">Name</label>
-                        <input type="text" className="form-control" id="name"onChange={handleInputChange} value={formData.name} placeholder="Name" />
+                        <input type="text" className="form-control" id="name" onChange={handleInputChange} value={formData.name} placeholder="Name" />
                     </div>
                     <div className="form-group col-sm-6">
                         <label htmlFor="surname">Surname</label>
@@ -48,7 +48,7 @@ export default function AddEmployeeForm() {
                 <div className="form-row">
                     <div className="form-group col-sm-6">
                         <label htmlFor="email">E-mail</label>
-                        <input type="email" className="form-control" id="email"onChange={handleInputChange} value={formData.email} placeholder="E-mail" />
+                        <input type="email" className="form-control" id="email" onChange={handleInputChange} value={formData.email} placeholder="E-mail" />
                     </div>
 
                     <div className="form-group col-sm-6">
@@ -57,12 +57,11 @@ export default function AddEmployeeForm() {
                     </div>
 
 
-
                 </div>
                 <div className="form-row">
                     <div className="form-group col-sm-4">
                         <label htmlFor="departmentName">Department</label>
-                        <select id="departmentName" className="custom-select" onChange={handleInputChange} value={formData.departmentName}required>
+                        <select id="departmentName" className="custom-select" onChange={handleInputChange} value={formData.departmentName} required>
                             <option value="">Open this select menu</option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
@@ -79,7 +78,6 @@ export default function AddEmployeeForm() {
                     </div>
                 </div>
                 <button type="submit" className="btn btn-primary">Add Employee</button>
-                {console.log(formData)}
             </form>
         </>
 

@@ -13,9 +13,9 @@ public class Employee extends BaseEntity {
     private String name;
     @Column(nullable = false)
     private String surname;
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String email;
-    @Column(nullable = false)
+    @Column(nullable = false, length = 11)
     private String phoneNumber;
     @Column(nullable = false)
     private String departmentName;
