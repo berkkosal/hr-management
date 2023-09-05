@@ -5,10 +5,12 @@ import com.kosalberk.hrmanagement.model.request.AddEmployeeRequest;
 import com.kosalberk.hrmanagement.service.EmployeeService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @AllArgsConstructor
+@CrossOrigin("*")
 public class EmployeeControllerImpl implements EmployeeController {
 
     private EmployeeService employeeService;
