@@ -10,4 +10,6 @@ public interface EmployeeService extends BaseService<EmployeeDto,Employee>{
 
 
     void register(AddEmployeeRequest request);
+
+
 }

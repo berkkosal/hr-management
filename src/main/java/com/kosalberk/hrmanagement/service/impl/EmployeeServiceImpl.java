@@ -9,6 +9,9 @@ import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+import java.util.UUID;
+
 @Service
 @RequiredArgsConstructor
 public class EmployeeServiceImpl implements EmployeeService{
@@ -25,20 +28,26 @@ public class EmployeeServiceImpl implements EmployeeService{
 
    
 
-
+    //!MODEL MAPPER
     @Override
     public EmployeeDto entityToDto(Employee employee) {
         return modelMapper.map(employee,EmployeeDto.class);
     }
-
     @Override
     public Employee dtoToEntity(EmployeeDto employeeDto) {
         return modelMapper.map(employeeDto,Employee.class);
     }
 
+    //!BASE
     @Override
-    public EmployeeDto getById(Long id) {
-        return null;
+    public EmployeeDto getById(UUID uuid) {
+        Optional<Employee> employee = employeeRepository.findById(uuid);
+        return employee.isPresent() ? entityToDto(employee.get()) : null;
+
+//        Optional<Employee> employee = null;
+//        if(uuid!=null){
+//            employee = employeeRepository.findById(uuid);
+//        } return employee.isPresent() ? entityToDto(employee)
     }
 
     @Override
