@@ -14,4 +14,11 @@ public class BaseResponse <T> {
         response.setData(data);
         return ResponseEntity.status(statusCode).body(response);
     }
+
+    public static <T> ResponseEntity<BaseResponse<T>> ok(T data) {
+        BaseResponse<T> response = new BaseResponse<>();
+        response.setSuccess(true);
+        response.setData(data);
+        return ResponseEntity.ok(response);
+    }
 }
