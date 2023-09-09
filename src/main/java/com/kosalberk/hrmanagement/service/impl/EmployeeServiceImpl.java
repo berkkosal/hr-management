@@ -15,18 +15,24 @@ import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
-public class EmployeeServiceImpl implements EmployeeService{
+public class EmployeeServiceImpl implements EmployeeService {
 
-   private final EmployeeRepository employeeRepository;
-   private final ModelMapper modelMapper;
+    private final EmployeeRepository employeeRepository;
+    private final ModelMapper modelMapper;
 
-
+    //? Add Employee
     @Override
     public void register(AddEmployeeRequest request) {
-        Employee employee = modelMapper.map(request,Employee.class);
+        Employee employee = modelMapper.map(request, Employee.class);
         employeeRepository.save(employee);
     }
 
+//    @Override
+//    public EmployeeDto employeeUpdate(UUID uuid, EmployeeDto employeeDto) {
+//        return null;
+//    }
+
+    //? Get All Employees
     @Override
     public List<?> employeeServiceList() {
         return employeeRepository.findAll();
@@ -36,23 +42,21 @@ public class EmployeeServiceImpl implements EmployeeService{
     //!MODEL MAPPER
     @Override
     public EmployeeDto entityToDto(Employee employee) {
-        return modelMapper.map(employee,EmployeeDto.class);
+        return modelMapper.map(employee, EmployeeDto.class);
     }
+
     @Override
     public Employee dtoToEntity(EmployeeDto employeeDto) {
-        return modelMapper.map(employeeDto,Employee.class);
+        return modelMapper.map(employeeDto, Employee.class);
     }
 
     //!BASE
+    //? Get Employee
     @Override
     public EmployeeDto getById(UUID uuid) {
         Optional<Employee> employee = employeeRepository.findById(uuid);
         return employee.isPresent() ? entityToDto(employee.get()) : null;
 
-//        Optional<Employee> employee = null;
-//        if(uuid!=null){
-//            employee = employeeRepository.findById(uuid);
-//        } return employee.isPresent() ? entityToDto(employee)
     }
 
     @Override
@@ -61,18 +65,33 @@ public class EmployeeServiceImpl implements EmployeeService{
     }
 
     @Override
-    public EmployeeDto Update(Long id, EmployeeDto employeeDto) {
-        return null;
+    public EmployeeDto update(UUID uuid, EmployeeDto employeeDto) {
+        EmployeeDto employeeDto1 = getById(uuid);
+        if (employeeDto1 != null) {
+            Employee employee = dtoToEntity(employeeDto1);
+            employee.setName(employeeDto.getName());
+            employee.setSurname(employeeDto.getSurname());
+            employee.setPhoneNumber(employeeDto.getPhoneNumber());
+            employee.setDepartmentName(employeeDto.getDepartmentName());
+            employee.setDateStarted(employeeDto.getDateStarted());
+            employee.setSalary(employeeDto.getSalary());
+            employeeRepository.save(employee);
+
+        }
+
+
+        return employeeDto;
     }
+
 
     @Override
-    public EmployeeDto DeleteById(Long id) {
-        return null;
+    public EmployeeDto deleteById(UUID uuid) {
+        EmployeeDto employeeDto = getById(uuid);
+        if (employeeDto != null) {
+            employeeRepository.deleteById(uuid);
+        }
+        return employeeDto;
     }
-
-
-
-
 
 
 }
