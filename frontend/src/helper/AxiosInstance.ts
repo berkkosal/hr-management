@@ -44,4 +44,18 @@ export const axiosPost = async (url: string, data?: any, headers?: any, params?:
   return response;
 }
 
+export const axiostDelete = async (url:string, headers?: any, params?: any) => {
+  const response = await axiosInstance.delete(url, {
+    headers,
+    params
+  });
+  return response;
+}
 
+export const axiosPut = async (url: string, data?: any, headers?: any, params?: any) => {
+  const response = await axiosInstance.put(url, data, {
+    headers,
+    params
+  });
+  return response;
+}

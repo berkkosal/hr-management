@@ -24,9 +24,16 @@ export default function AddEmployeeForm() {
 
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        axiosPost("http://localhost:8080/add-employee", formData)
+    const handleSubmit = async (e)  => {
+       
+        try {
+            e.preventDefault();
+            await axiosPost("http://localhost:8080/add-employee", formData)
+        } catch (error) {
+            console.error('error')
+        }
+        
+        
 
     };
 
