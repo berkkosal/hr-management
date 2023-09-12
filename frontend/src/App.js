@@ -6,6 +6,8 @@ import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import AddEmployeeForm from "./containers/Employees/AddEmployeeForm";
 import EmployeeUpdate from "./containers/Employees/EmployeeUpdate";
+import UserRegister from "./containers/User/UserRegister";
+import UserLogin from "./containers/User/UserLogin";
 
 function App() {
   return (
@@ -18,8 +20,8 @@ function App() {
           <Routes>
 
             <Route path="/" element={<HomePage />} />
-            {/* <Route path="/sign-up" element={/>}/> */}
-            {/* <Route path="/login" element= {/>}/> */}
+            <Route path="/sign-up" element={<UserRegister/>}/>
+            <Route path="/login" element={<UserLogin/>}/>
             {/* <Route path="/view" element={}/> */}
             <Route path="/add-employee" element={<AddEmployeeForm />} />
             <Route path="/update-employee" element={<EmployeeUpdate />} />

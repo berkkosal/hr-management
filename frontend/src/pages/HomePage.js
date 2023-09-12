@@ -5,7 +5,7 @@ const {
     Mountains,
     Soybeans,
     Trees,
-    Clouds
+    
 } = homepageContent
 
 
