@@ -10,7 +10,7 @@ import EmployeeUpdate from "./containers/Employees/EmployeeUpdate";
 function App() {
   return (
     <div>
-      <Header />
+      <Header  />
 
       <div className="container">
 
@@ -18,15 +18,17 @@ function App() {
           <Routes>
 
             <Route path="/" element={<HomePage />} />
+            {/* <Route path="/sign-up" element={/>}/> */}
+            {/* <Route path="/login" element= {/>}/> */}
+            {/* <Route path="/view" element={}/> */}
             <Route path="/add-employee" element={<AddEmployeeForm />} />
             <Route path="/update-employee" element={<EmployeeUpdate />} />
-
+            
           </Routes>
         </Router>
 
       </div>
-      <Footer />
-
+      <Footer  />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 package com.kosalberk.hrmanagement.service.impl;
 
+import com.kosalberk.hrmanagement.helper.MailHelper;
 import com.kosalberk.hrmanagement.model.dto.EmployeeDto;
 import com.kosalberk.hrmanagement.model.entity.Employee;
 import com.kosalberk.hrmanagement.model.request.AddEmployeeRequest;
@@ -19,12 +20,13 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     private final EmployeeRepository employeeRepository;
     private final ModelMapper modelMapper;
-
+    private final MailHelper mailHelper;
     //? Add Employee
     @Override
     public void register(AddEmployeeRequest request) {
         Employee employee = modelMapper.map(request, Employee.class);
         employeeRepository.save(employee);
+        mailHelper.sendEmail(request.getEmail(), "Kayıt Oldunuz!", "Tebrikler sistemimize başarıyla kayıt oldunuz. Hoşgeldiniz.");
     }
 
 //    @Override
@@ -66,9 +68,9 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public EmployeeDto update(UUID uuid, EmployeeDto employeeDto) {
-        EmployeeDto employeeDto1 = getById(uuid);
-        if (employeeDto1 != null) {
-            Employee employee = dtoToEntity(employeeDto1);
+        Optional<Employee> employee1 = employeeRepository.findById(uuid);
+        if (employee1.isPresent()) {
+            Employee employee = employee1.get();
             employee.setName(employeeDto.getName());
             employee.setSurname(employeeDto.getSurname());
             employee.setPhoneNumber(employeeDto.getPhoneNumber());

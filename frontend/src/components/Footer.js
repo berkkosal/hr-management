@@ -1,21 +1,25 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faIdCard } from '@fortawesome/free-solid-svg-icons'
+
 import React from 'react'
 
+const footerStyle = {
+  backgroundColor: "gray",
+  textAlign: "center",
+  position: "fixed",
+  bottom: "0",
+  width: "100%"
+}
+
+
 export default function Footer() {
+
+
   return (
-    <div style={{
-      backgroundColor: "black",
-
-    }}>
-
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-        </div>
-        <img class="card-img-bottom" src="..."/>
+    <div style={footerStyle}>
+      <div>
+        <FontAwesomeIcon icon={faIdCard} />
       </div>
-      FOOTER
     </div>
   )
 }
