@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { axiosGet, axiostDelete } from '../../helper/AxiosInstance.ts'
-
-
+//İsimle filtreleme yaparak sonuçlar döndürülecek.
+//Add Employee butonu olacak AddEmployeeForm'a yönlendirme yapacak.
+//Card => Fotoğraf, İsim Soyisim, Departman gözükmeli.
+//Update, Delete butonları olmalı.
+//Update EmployeeUpdate'e yönlendirecek.
 export default function EmployeeList() {
 
   const [employees, setEmployees] = useState([]);
@@ -38,7 +41,6 @@ export default function EmployeeList() {
     <div>
       <h1>All Employees</h1>
       {/* <Link to="add-employee" className="btn btn-primary mb-2"> Add Employee</Link> */}
-
       <ul>
         {employees.map((emp) => (
           <li key={emp.uuid}> {/* Added key prop here */}
@@ -54,6 +56,45 @@ export default function EmployeeList() {
         ))}
 
       </ul>
+
+      <div className="container">
+        <div className="row">
+          <div className="col-md">
+            <div className="card" style={{ width: "15rem" }}>
+              <img className="card-img-top" src={""} alt="" />
+              <div className="card-body">
+                <p className="card-text">Hoşgeldiniz</p>
+                <button>Giriş yap</button>
+              </div>
+            </div>
+          </div>
+          <div className="col-md">
+            <div className="card" style={{ width: "16rem" }}>
+              <img className="card-img-top" src={""} alt="" />
+              <div className="card-body">
+                <p className="card-text">Hoşgeldiniz</p>
+                <button>Giriş yap</button>
+              </div>
+            </div>
+          </div>
+          <div className="col-md">
+            <div className="card" style={{ width: "18rem" }}>
+              <img className="card-img-top" src={""} alt="" />
+              <div className="card-body">
+                <p className="card-text">Hoşgeldiniz</p>
+                <button>Giriş yap</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
     </div>
+
+
   )
 }
