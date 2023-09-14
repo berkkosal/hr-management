@@ -17,6 +17,8 @@ export const homepageContent = {
     Mountains,
     Soybeans,
     Trees,
-    Clouds
+    Clouds,
+    title:"Hoşgeldiniz.",
+    subtitle:"İnsan Kaynakları Yönetim Paneli"
 }
 
