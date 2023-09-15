@@ -24,15 +24,14 @@ h1 {
 .col {
     margin-top: 2rem;
     border-radius: 5%;
-    padding-left: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .imgWrapper {
     margin: 2rem;
     border-radius: 5%;
     background-size: cover;
-
-
 }
 
 

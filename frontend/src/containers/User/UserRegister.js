@@ -5,16 +5,22 @@ import { Link } from 'react-router-dom'
 
 
 
+const UserRegister = (e) => {
 
-export default function UserRegister() {
+
+
+    
+
+
+
     return (
         <div className="container">
             <form>
                 <div className="form-row">
-                    
-                        <label htmlFor="name">Name</label>
-                        <input type="text" className="form-control" id="name" placeholder="Name" />
-                    
+
+                    <label htmlFor="name">Name</label>
+                    <input type="text" className="form-control" id="name" placeholder="Name" />
+
                     <div className="form-group col-sm-6">
                         <label htmlFor="surname">Surname</label>
                         <input type="text" className="form-control" id="surname" placeholder="Surname" />
@@ -42,3 +48,4 @@ export default function UserRegister() {
 
     )
 }
+export default UserRegister;
