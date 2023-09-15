@@ -1,6 +1,67 @@
-.vertical-box{
-    height: 70vh;
-    margin-top: 10vh;
+import h1 {
+    font-size: 4rem;
+}
+
+.pWrapper {
+    opacity: 0.4;
+    max-width: 30rem;
+}
+
+.badge {
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+}
+
+.iconWrapper {
+    padding-left: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.col {
+    margin-top: 2rem;
     border-radius: 5%;
-    background-color: red;
+    padding-left: 3rem;
+}
+
+.imgWrapper {
+    margin: 2rem;
+    border-radius: 5%;
+    background-size: cover;
+    
+
+}
+
+
+
+.btn {
+    justify-content: center;
+    margin: 3rem;
+    width: 9rem;
+    height: 3rem;
+    border-radius: 5%
+}
+
+img {
+    border-radius: 9%;
+    background-size:contain;
+   
+}
+
+.flexWrapper {
+
+    background-image: url('https://img.freepik.com/free-photo/vivid-blurred-colorful-wallpaper-background_58702-2789.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(113, 52, 52, 0);
+    backdrop-filter: blur(5px);
+    margin-top: 4rem;
+    border-radius: 3%;
+}
+
+.card-img{
+    border-radius: 1rem;
 }

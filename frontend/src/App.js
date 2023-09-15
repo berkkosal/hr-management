@@ -16,8 +16,9 @@ import EmployeeView from "./containers/Employees/EmployeeView";
 function App() {
   return (
     <div>
+      <img className="backgroundImage" src="https://images.unsplash.com/photo-1614850523060-8da1d56ae167?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGlnaHQlMjBjb2xvdXJ8ZW58MHx8MHx8fDA%3D&w=1000&q=80"/>
       <Header  />
-
+      
       <div className="container">
 
         <Router>
