@@ -22,12 +22,12 @@ const HomePage = () => {
                 <div className='d-flex'>
                     <div className='col'>
                         <div className='iconWrapper'><FontAwesomeIcon icon={faAddressBook} /></div>
-                        <div className="badge bg-lightw">{title}</div>
+                        <div className="badge bg-secondary">{title}</div>
                         <div><h1>{titleBrand}</h1></div>
                         <div><p className='pWrapper'>{subtitle}</p></div>
                         <div className='d-flex justify-content-center p-3'>
-                            <div><Link to="/login" className='btn btn-secondary'>Login</Link></div>
-                            <div><Link to="/sign-up" className='btn btn-secondary'>Signup</Link></div>
+                            <div><Link to="/login" className='btn btn-info'>Login</Link></div>
+                            <div><Link to="/sign-up" className='btn btn-info'>Signup</Link></div>
                         </div>
                     </div>
 
