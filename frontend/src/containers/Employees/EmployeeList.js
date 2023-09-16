@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { axiosGet, axiostDelete } from '../../helper/AxiosInstance.ts'
+import { Link } from 'react-router-dom';
 //İsimle filtreleme yaparak sonuçlar döndürülecek.
 //Add Employee butonu olacak AddEmployeeForm'a yönlendirme yapacak.
 //Card => Fotoğraf, İsim Soyisim, Departman gözükmeli.
@@ -40,7 +41,7 @@ export default function EmployeeList() {
   return (
     <div>
       <h1>All Employees</h1>
-      {/* <Link to="add-employee" className="btn btn-primary mb-2"> Add Employee</Link> */}
+      <Link to="add-employee" className="btn btn-primary mb-2"> Add Employee</Link>
       <ul>
         {employees.map((emp) => (
           <li key={emp.uuid}> {/* Added key prop here */}
