@@ -41,10 +41,10 @@ export default function EmployeeList() {
   return (
     <div>
       <h1>All Employees</h1>
-      <Link to="add-employee" className="btn btn-primary mb-2"> Add Employee</Link>
+      <Link to="/add-employee" className="btn btn-primary mb-2"> Add Employee</Link>
       <ul>
         {employees.map((emp) => (
-          <li key={emp.uuid}> {/* Added key prop here */}
+          <li key={emp.uuid}> 
             {emp.name}
             <br />
             {emp.surname}

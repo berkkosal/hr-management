@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function UserLogin() {
   return (
@@ -16,7 +17,7 @@ export default function UserLogin() {
             </div>
           </div>
         </div>
-        <button type="submit">Login</button>
+        <Link to="/list"><button type="submit">Login</button></Link>
       </form>
 
     </div>

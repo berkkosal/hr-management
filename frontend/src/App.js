@@ -28,13 +28,14 @@ function App() {
 
         <Router>
           <Routes>
-            <Route path="/" element={<HomePage />} />       
-            <Route path="/list" element={<EmployeeList />} />
+            <Route path="/" element={<HomePage />} />
             <Route path="/sign-up" element={<UserRegister />} />
             <Route path="/login" element={<UserLogin />} />
-            <Route path="/view" element={<EmployeeView />} />
-            <Route path="/list/add-employee" element={<AddEmployeeForm />} />
+            <Route path="/list" element={<EmployeeList />} />
+            <Route path="/add-employee" element={<AddEmployeeForm />} />
             <Route path="/update-employee" element={<EmployeeUpdate />} />
+            <Route path="/view" element={<EmployeeView />} />
+            
           </Routes>
         </Router>
 
