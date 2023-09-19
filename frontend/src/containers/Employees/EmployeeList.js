@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 //Card => Fotoğraf, İsim Soyisim, Departman gözükmeli.
 //Update, Delete butonları olmalı.
 //Update EmployeeUpdate'e yönlendirecek.
-export default function EmployeeList() {
+const EmployeeList = () => {
 
   const [employees, setEmployees] = useState([]);
 
@@ -39,11 +39,10 @@ export default function EmployeeList() {
 
   return (
     <div>
-      <h1>All Employees</h1>
       <Link to="/add-employee" className="btn btn-primary mb-2"> Add Employee</Link>
       <ul>
         {employees.map((emp) => (
-          <li key={emp.uuid}> 
+          <li key={emp.uuid}>
             {emp.name}
             <br />
             {emp.surname}
@@ -57,53 +56,42 @@ export default function EmployeeList() {
 
       </ul>
 
-      <div className="container">
-        <div className="row">
-          <div className="col-md">
-            <div className="card" style={{ width: "15rem" }}>
-              <img className="card-img-top" src={""} alt="" />
-              <div className="card-body">
-                <p className="card-text">Hoşgeldiniz</p>
-                <button>Giriş yap</button>
+      <div className="container" >
+
+
+
+        <div className="col-md">
+          <div className='row'>
+            <div className="card" style={{ maxWidth: "18rem" }}>
+              <img className="card-img-top" src={"https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"} alt="" />
+              <div className="card-body d-flex flex-column align-items-center">
+                <h2 className="card-title">Card Title</h2>
+                <p className="card-text">İnsan Kaynakları Departmanı</p>
+                <button type='button' className='btn btn-info mx-1'>View</button>
+                <button type='button' className='btn btn-info mx-1'>Update</button>
+                <button type='button' className='btn btn-info mx-1'>Delete</button>
               </div>
             </div>
           </div>
-          <div className="col-md">
-            <div className="card" style={{ width: "16rem" }}>
-              <img className="card-img-top" src={""} alt="" />
-              <div className="card-body">
-                <p className="card-text">Hoşgeldiniz</p>
-                <button>Giriş yap</button>
-              </div>
-            </div>
-          </div>
-
-          Deneme Employe
-          <div className="col-md">
-
-            <div className="card" style={{ width: "18rem" }}>
-              <img className="card-img-top" src={""} alt="" />
-              <div className="card-body">
-                <p className="card-text">Hoşgeldiniz</p>
-                <button>View</button>
-                <button>Update</button>
-                <button>Delete</button>
-
-              </div>
-            </div>
-            
-          </div>
-
-
         </div>
+
+
+
+
+
+
+
+
       </div>
-
-
-
-
-
     </div>
+
+
+
+
+
 
 
   )
 }
+
+export default EmployeeList;
