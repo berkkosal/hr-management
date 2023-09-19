@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { axiosGet, axiostDelete } from '../../helper/AxiosInstance.ts'
 import { Link } from 'react-router-dom';
 //İsimle filtreleme yaparak sonuçlar döndürülecek.
-//Add Employee butonu olacak AddEmployeeForm'a yönlendirme yapacak.
 //Card => Fotoğraf, İsim Soyisim, Departman gözükmeli.
 //Update, Delete butonları olmalı.
 //Update EmployeeUpdate'e yönlendirecek.
@@ -78,15 +77,24 @@ export default function EmployeeList() {
               </div>
             </div>
           </div>
+
+          Deneme Employe
           <div className="col-md">
+
             <div className="card" style={{ width: "18rem" }}>
               <img className="card-img-top" src={""} alt="" />
               <div className="card-body">
                 <p className="card-text">Hoşgeldiniz</p>
-                <button>Giriş yap</button>
+                <button>View</button>
+                <button>Update</button>
+                <button>Delete</button>
+
               </div>
             </div>
+            
           </div>
+
+
         </div>
       </div>
 
