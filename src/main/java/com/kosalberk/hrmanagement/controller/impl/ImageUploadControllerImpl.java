@@ -21,7 +21,7 @@ public class ImageUploadControllerImpl implements ImageUploadController {
     public ResponseEntity<String> uploadImage(MultipartFile file) {
 
         try {
-            String uploadDirectory = "C:\\Users\\Berk_Koşal\\Desktop\\hr-uploads";
+            String uploadDirectory = "C:\\Users\\Berk Koşal\\Desktop\\hr-uploads\\";
             String fileName = StringUtils.cleanPath(Objects.requireNonNull(file.getOriginalFilename()));
             Path filePath = Path.of(uploadDirectory + fileName);
             Files.copy(file.getInputStream(), filePath);
