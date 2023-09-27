@@ -26,7 +26,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     public void register(AddEmployeeRequest request) {
         Employee employee = modelMapper.map(request, Employee.class);
         employeeRepository.save(employee);
-        mailHelper.sendRegisterEmail(request.getEmail());
+//        mailHelper.sendRegisterEmail(request.getEmail());
         System.out.println("işlem tamam");
     }
 
